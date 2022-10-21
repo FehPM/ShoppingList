@@ -26,7 +26,11 @@ export default function Item({ id, name, completed, onToggle, onDelete }) {
     );
   };
   return (
-    <View style={styles.container}>
+    <View style={{
+      flex: 1,
+      alignContent: 'center',
+      width: 340,
+      backgroundColor: completed ? '#D9FCE1' : 'white',}}>
       <View style={styles.item}>
         <TouchableOpacity style={styles.checkIcon}>
           <Feather
@@ -36,7 +40,12 @@ export default function Item({ id, name, completed, onToggle, onDelete }) {
             onPress={() => onToggle(id)}
           />
         </TouchableOpacity>
-        <Text style={styles.itemName}>{name}</Text>
+        <Text style={{
+    alignSelf: 'center',
+    textDecorationLine: completed ? 'line-through' : 'none',
+    color: completed ? '#3FAF47' : 'black',
+    fontSize: 16,
+    width: 260,}}>{name}</Text>
         <TouchableOpacity
           onPress={() => deleteAlertHandler()}
           style={styles.deleteIcon}>
@@ -49,10 +58,6 @@ export default function Item({ id, name, completed, onToggle, onDelete }) {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    alignContent: 'center',
-    width: 340,
-    backgroundColor: completed ? '#D9FCE1' : 'white',
   },
   item: {
     flexDirection: 'row',
@@ -66,11 +71,6 @@ const styles = StyleSheet.create({
     right: 5,
   },
   itemName: {
-    alignSelf: 'center',
-    textDecorationLine: completed ? 'line-through' : 'none',
-    color: completed ? '#3FAF47' : 'black',
-    fontSize: 16,
-    width: 260,
   },
   deleteIcon: {
     alignContent: 'flex-end',
