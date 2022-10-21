@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "Shopping List",
+    "slug": "snack-4401d412-236a-4988-9922-939a82d46286",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/favicon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/shopping-cart-ecomm.gif",
+      "resizeMode": "contain",
+      "backgroundColor": "#2980B9"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/favicon.png",
+        "backgroundColor": "#2980B9"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
